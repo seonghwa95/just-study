@@ -1,12 +1,12 @@
 package com.purpose.juststudy.dataValidation.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.validation.constraints.NotBlank;
 
-@Getter
-@Setter
 public class MessageCreate {
 
+    @NotBlank(message = "메세지 제목이 없음")
     private String messageTitle;
+
+    @NotBlank(message = "메세지 내용 없음")
     private String messageContent;
 }
